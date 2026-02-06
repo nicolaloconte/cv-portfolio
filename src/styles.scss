@@ -169,3 +169,15 @@ section {
     opacity: 0.85;
   }
 }
+
+.brand-btn:focus,
+.brand-btn:focus-visible,
+.brand-btn .mat-mdc-focus-indicator {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* MDC internal pseudo-element */
+.brand-btn::after {
+  display: none !important;
+}

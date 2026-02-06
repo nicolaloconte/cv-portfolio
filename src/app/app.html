@@ -1,4 +1,4 @@
-<mat-toolbar color="primary" class="sticky top-0 z-50">
+<mat-toolbar color="primary" class="fixed top-0 left-0 right-0 z-50">
   <div class="w-full max-w-[1120px] mx-auto px-4 flex items-center justify-between">
     <!-- Brand -->
     <button
@@ -8,8 +8,8 @@
       (click)="smoothScroll('home')"
       aria-label="Torna a inizio pagina"
     >
-      <h1 class="font-semibold tracking-tight">Portfolio</h1>
-      <h1 class="opacity-80 text-sm"> by Nico</h1>
+      <span class="font-semibold tracking-tight">Portfolio</span>
+      <span class="opacity-80 text-sm"> by Nico</span>
     </button>
 
     <!-- Menu desktop -->
@@ -23,7 +23,7 @@
   </div>
 </mat-toolbar>
 
-<main class="text-white/90 min-h-screen">
+<main class="text-white/90 min-h-screen pt-16">
   <!-- HERO -->
   <section id="home" class="py-14 hero">
     <div class="max-w-[1120px] mx-auto px-4 grid gap-6 md:grid-cols-[1.2fr_.8fr] items-start">
@@ -73,7 +73,7 @@
       <aside class="rounded-2xl border border-white/10 bg-white/5 p-5">
         <div class="flex items-center justify-between">
           <div class="font-mono text-xs opacity-70">Quick Links</div>
-          <span class="text-xs opacity-60">-</span>
+          <span class="text-xs opacity-60"></span>
         </div>
 
         <div class="mt-4 space-y-3">

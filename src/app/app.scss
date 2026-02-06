@@ -1,0 +1,177 @@
+/* ===== Timeline layout ===== */
+.timeline {
+  position: relative;
+  padding-left: 22px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* fill line (on scroll) */
+.timeline__fill {
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 2px;
+  height: 0%;
+  background: linear-gradient(to bottom, var(--violet-main), var(--violet-strong), var(--blue-soft));
+  filter: drop-shadow(0 0 10px rgba(147, 51, 234, 0.25));
+  transition: height 0.15s linear;
+  pointer-events: none;
+}
+
+.t-item {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.t-dot {
+  position: absolute;
+  left: 2px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #0b0d12;
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(#0b0d12, #0b0d12),
+    linear-gradient(135deg, var(--violet-main), var(--violet-strong));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.15);
+}
+
+.t-card {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.t-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.t-role {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.t-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  opacity: 0.85;
+  font-size: 12px;
+}
+
+.t-meta span {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.t-desc {
+  margin-top: 10px;
+  opacity: 0.82;
+  line-height: 1.55;
+}
+
+.t-chips {
+  margin-top: 12px;
+}
+
+.subgrid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+  .subgrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.subcard {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.subcard .title {
+  font-weight: 600;
+}
+
+.subcard .when {
+  margin-top: 6px;
+  opacity: 0.75;
+  font-size: 12px;
+}
+
+.subcard .desc {
+  margin-top: 8px;
+  opacity: 0.82;
+  line-height: 1.55;
+}
+
+/* ===== Glow on scroll ===== */
+.t-card,
+.subcard {
+  position: relative;
+  transform: translateY(6px);
+  opacity: 0.92;
+  transition: transform 0.45s ease, opacity 0.45s ease, box-shadow 0.45s ease;
+}
+
+.t-card::before,
+.subcard::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--violet-main), var(--violet-strong), var(--blue-soft));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.is-inview {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(147, 51, 234, 0.18), 0 12px 45px rgba(0, 0, 0, 0.45);
+}
+
+.is-inview::before {
+  opacity: 0.95;
+}
+
+/* ===== Chips tweak ===== */
+mat-chip {
+  background: rgba(124, 58, 237, 0.08) !important;
+  border: 1px solid rgba(124, 58, 237, 0.35) !important;
+  color: #e9d5ff !important;
+}
+
+mat-chip:hover {
+  background: rgba(147, 51, 234, 0.18) !important;
+  border-color: var(--violet-strong) !important;
+}

@@ -1,0 +1,398 @@
+<mat-toolbar color="primary" class="sticky top-0 z-50">
+  <div class="w-full max-w-[1120px] mx-auto px-4 flex items-center justify-between">
+    <!-- Brand -->
+    <button
+      mat-button
+      type="button"
+      class="flex items-baseline gap-2 !p-0"
+      (click)="smoothScroll('home')"
+      aria-label="Torna a inizio pagina"
+    >
+      <span class="font-semibold tracking-tight">Portfolio</span>
+      <span class="opacity-80 text-sm"> by Nico</span>
+    </button>
+
+    <!-- Menu desktop -->
+    <nav class="hidden md:flex items-center gap-2">
+      <button mat-button type="button" (click)="smoothScroll('about')">Chi sono</button>
+      <button mat-button type="button" (click)="smoothScroll('experience')">Esperienza</button>
+      <button mat-button type="button" (click)="smoothScroll('education')">Formazione</button>
+      <button mat-button type="button" (click)="smoothScroll('skills')">Competenze</button>
+      <button mat-button type="button" (click)="smoothScroll('contact')">Contatti</button>
+    </nav>
+  </div>
+</mat-toolbar>
+
+<main class="text-white/90 min-h-screen">
+  <!-- HERO -->
+  <section id="home" class="py-14 hero">
+    <div class="max-w-[1120px] mx-auto px-4 grid gap-6 md:grid-cols-[1.2fr_.8fr] items-start">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2 text-sm">
+          <span class="px-3 py-1 rounded-full border border-white/10 bg-white/5">Benvenuti</span>
+        </div>
+
+        <div class="space-y-3">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+            Nicola Andrea <span class="text-white/80">Lo Conte</span>
+          </h1>
+
+          <p class="text-white/75 max-w-[68ch] leading-relaxed">
+          </p>
+        </div>
+
+        <!-- CTA -->
+        <div class="flex gap-3 flex-wrap pt-1">
+          <button mat-stroked-button type="button" color="primary" (click)="smoothScroll('experience')">
+            Vedi esperienza
+          </button>
+
+          <button mat-stroked-button type="button" color="primary" (click)="smoothScroll('contact')">
+            Contattami
+          </button>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="font-mono text-xs opacity-70">Età</div>
+            <div class="text-lg font-semibold">24</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="font-mono text-xs opacity-70">Focus</div>
+            <div class="text-lg font-semibold">Development</div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <div class="font-mono text-xs opacity-70">Disponibilità</div>
+            <div class="text-lg font-semibold">Stage</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick links -->
+      <aside class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="flex items-center justify-between">
+          <div class="font-mono text-xs opacity-70">Quick Links</div>
+          <span class="text-xs opacity-60">-</span>
+        </div>
+
+        <div class="mt-4 space-y-3">
+          <a
+            class="block rounded-2xl border border-white/10 bg-black/20 px-4 py-3 hover:bg-black/30 transition"
+            href="mailto:nicola.lo.conte18@gmail.com"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span aria-hidden="true">✉️</span>
+                <span>Email</span>
+              </div>
+              <span class="font-mono text-xs opacity-60">↗</span>
+            </div>
+            <div class="text-xs opacity-70 mt-1">nicola.lo.conte18@gmail.com</div>
+          </a>
+
+          <a
+            class="block rounded-2xl border border-white/10 bg-black/20 px-4 py-3 hover:bg-black/30 transition"
+            href="https://www.linkedin.com/in/nicola-andrea-lo-conte-68035939a/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span aria-hidden="true">💼</span>
+                <span>LinkedIn</span>
+              </div>
+              <span class="font-mono text-xs opacity-60">↗</span>
+            </div>
+            <div class="text-xs opacity-70 mt-1">Profilo pubblico</div>
+          </a>
+
+          <a
+            class="block rounded-2xl border border-white/10 bg-black/20 px-4 py-3 hover:bg-black/30 transition"
+            href="https://github.com/nicolaloconte"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span aria-hidden="true">💻</span>
+                <span>GitHub</span>
+              </div>
+              <span class="font-mono text-xs opacity-60">↗</span>
+            </div>
+            <div class="text-xs opacity-70 mt-1">@nicolaloconte</div>
+          </a>
+
+          <a
+            class="block rounded-2xl border border-white/10 bg-black/20 px-4 py-3 hover:bg-black/30 transition"
+            href="/assets/Nicola_Andrea_Lo_Conte_CV.pdf"
+            target="_blank"
+            download
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span aria-hidden="true">📄</span>
+                <span>CV PDF</span>
+              </div>
+              <span class="font-mono text-xs opacity-60">↗</span>
+            </div>
+            <div class="text-xs opacity-70 mt-1">Curriculum Aggiornato Feb. 2026</div>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section id="about" class="py-14 border-t border-white/5">
+    <div class="max-w-[1120px] mx-auto px-4">
+      <h2 class="text-2xl font-semibold">Chi sono</h2>
+      <p class="text-white/75 mt-3 max-w-[80ch] leading-relaxed">
+        Sono uno studente di Informatica con una forte passione per lo sviluppo software. Cerco opportunità in ambito informatico
+        e sono pronto ad apprendere nuove tecnologie e conoscenze del mondo IT, con interesse per <span class="text-white/90">development</span> e
+            <span class="text-white/90">cybersecurity</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ESPERIENZA -->
+  <section id="experience" class="py-14 border-t border-white/5">
+    <div class="max-w-[1120px] mx-auto px-4">
+      <h2 class="text-2xl font-semibold">Esperienza</h2>
+      <p class="text-white/70 mt-2">Percorsi Lavorativi</p>
+
+      <div class="timeline mt-8">
+        <div class="timeline__fill" id="timelineFill" aria-hidden="true"></div>
+
+        <!-- Lavoro -->
+        <div class="t-item">
+          <div class="t-dot"></div>
+
+          <div class="t-card">
+            <div class="t-top">
+              <div class="t-role">Junior Web Developer</div>
+              <div class="t-meta">
+                <span>S.G. Assistenza S.R.L.</span>
+                <span>07/2025 → 01/2026</span>
+              </div>
+            </div>
+
+            <div class="t-desc">
+              Inserito inizialmente nell’area commerciale, successivamente coinvolto nello sviluppo di un e-commerce
+              aziendale realizzato con PrestaShop, in affiancamento a un senior developer.
+              Mi sono occupato dell’integrazione di un <b>software gestionale esterno (.NET)</b>,
+              curando lo scambio dati tra gestionale ed e-commerce.
+            </div>
+
+            <div class="t-chips">
+              <mat-chip-set>
+                <mat-chip>PHP</mat-chip>
+                <mat-chip>Data Flow</mat-chip>
+                <mat-chip>Front End</mat-chip>
+                <mat-chip>Software Gestionale</mat-chip>
+                <mat-chip>Team Work</mat-chip>
+                <mat-chip>E-Commerce</mat-chip>
+              </mat-chip-set>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tirocini & Volontariato -->
+        <div class="t-item">
+          <div class="t-dot"></div>
+
+          <div class="t-card">
+            <div class="t-top">
+              <div class="t-role">Tirocini & Volontariato</div>
+              <div class="t-meta">
+                <span>2021 → 2024</span>
+              </div>
+            </div>
+
+            <div class="subgrid">
+              <div class="subcard">
+                <div class="title">Stage per Geometri</div>
+                <div class="when">2021 → 2023</div>
+                <div class="desc">Disegno tecnico, contabilità e gestione pratiche edilizie.</div>
+                <div class="t-chips">
+                  <mat-chip-set>
+                    <mat-chip>CAD</mat-chip>
+                    <mat-chip>Contabilità</mat-chip>
+                    <mat-chip>Pratiche Edilizie</mat-chip>
+                  </mat-chip-set>
+                </div>
+              </div>
+
+              <div class="subcard">
+                <div class="title">Servizio Civile</div>
+                <div class="when">2021 → 2022</div>
+                <div class="desc">Protezione Civile: supporto operativo e attività sul territorio.</div>
+                <div class="t-chips">
+                  <mat-chip-set>
+                    <mat-chip>Team Work</mat-chip>
+                    <mat-chip>Responsabilità</mat-chip>
+                    <mat-chip>Operatività</mat-chip>
+                    <mat-chip>Gestione Emergenze</mat-chip>
+                  </mat-chip-set>
+                </div>
+              </div>
+
+              <div class="subcard">
+                <div class="title">Soccorritore Sanitario (ANPAS)</div>
+                <div class="when">2022 → 2024</div>
+                <div class="desc">Emergenza e trasporto sanitario.</div>
+                <div class="t-chips">
+                  <mat-chip-set>
+                    <mat-chip>Gestione Emergenze</mat-chip>
+                    <mat-chip>Trasporto</mat-chip>
+                    <mat-chip>Turni</mat-chip>
+                    <mat-chip>Reperibilità</mat-chip>
+                    <mat-chip>Gestione Stress</mat-chip>
+                  </mat-chip-set>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAZIONE -->
+<section id="education" class="py-14 border-t border-white/5">
+  <div class="max-w-[1120px] mx-auto px-4">
+    <h2 class="text-2xl font-semibold">Formazione</h2>
+    <p class="text-white/70 mt-2">Percorso accademico e academy.</p>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <!-- Academy Java -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="flex items-center justify-between gap-3">
+          <div class="font-semibold">Academy Java Developer</div>
+          <span class="font-mono text-xs opacity-70">Gen → Feb 2026</span>
+        </div>
+        <p class="text-white/75 mt-3 leading-relaxed">
+          Percorso intensivo orientato allo sviluppo backend con Java e Spring, con attività pratiche e progetti.
+        </p>
+        <div class="mt-4">
+          <mat-chip-set>
+            <mat-chip>Java</mat-chip>
+            <mat-chip>OOP Java</mat-chip>
+            <mat-chip>JavaScript</mat-chip>
+            <mat-chip>Spring Ecosystem</mat-chip>
+            <mat-chip>SQL / MySQL</mat-chip>
+          </mat-chip-set>
+        </div>
+      </div>
+
+      <!-- UniPegaso -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="flex items-center justify-between gap-3">
+          <div class="font-semibold">Informatica — UniPegaso</div>
+          <span class="font-mono text-xs opacity-70">2025 → Presente</span>
+        </div>
+        <p class="text-white/75 mt-3 leading-relaxed">
+          Studi universitari in corso, con focus su basi di programmazione, strutture dati e concetti di ingegneria del software.
+        </p>
+        <div class="mt-4">
+          <mat-chip-set>
+            <mat-chip>Python</mat-chip>
+            <mat-chip>C++</mat-chip>
+            <mat-chip>HTML / CSS</mat-chip>
+          </mat-chip-set>
+        </div>
+      </div>
+
+      <!-- Diploma -->
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+        <div class="flex items-center justify-between gap-3">
+          <div class="font-semibold">Diploma CAT (Geometra) — IISS Ruggero II</div>
+          <span class="font-mono text-xs opacity-70">2015 → 2020</span>
+        </div>
+                <p class="text-white/75 mt-3 leading-relaxed">
+          Diploma in Costruzioni, Ambiente e Territorio, con competenze in disegno tecnico, topografia e gestione pratiche edilizie.
+        </p>
+        <div class="mt-4">
+          <mat-chip-set>
+            <mat-chip>Disegno CAD</mat-chip>
+            <mat-chip>Blender</mat-chip>
+            <mat-chip>3D Rendering</mat-chip>
+          </mat-chip-set>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nota certificazioni -->
+    <div class="mt-6 rounded-2xl border border-white/10 bg-black/20 px-5 py-4">
+      <div class="font-mono text-xs opacity-70">Certificazioni</div>
+      <div class="mt-1 text-white/75">In aggiornamento.</div>
+    </div>
+  </div>
+</section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-14 border-t border-white/5">
+    <div class="max-w-[1120px] mx-auto px-4">
+      <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 class="text-2xl font-semibold">Competenze</h2>
+          <p class="text-white/70 mt-2">Filtro Categorie →</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('all')">Tutte</button>
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('backend')">Backend</button>
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('web')">Web</button>
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('db')">DB</button>
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('tools')">Tools</button>
+          <button mat-stroked-button type="button" color="primary" (click)="setSkillFilter('soft')">Soft</button>
+        </div>
+      </div>
+
+      <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5">
+        <mat-chip-set>
+          <mat-chip *ngFor="let s of filteredSkills()">{{ s }}</mat-chip>
+        </mat-chip-set>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section id="contact" class="py-14 border-t border-white/5">
+    <div class="max-w-[1120px] mx-auto px-4">
+      <h2 class="text-2xl font-semibold">Contatti</h2>
+
+      <div class="mt-4 grid gap-3 md:grid-cols-4">
+        <a class="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition"
+           href="mailto:nicola.lo.conte18@gmail.com">
+          <div class="text-sm opacity-70">Email</div>
+          <div class="mt-1 font-medium">nicola.lo.conte18@gmail.com</div>
+        </a>
+
+        <a class="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition"
+           href="https://www.linkedin.com/in/nicola-andrea-lo-conte-68035939a/" target="_blank" rel="noreferrer">
+          <div class="text-sm opacity-70">LinkedIn</div>
+          <div class="mt-1 font-medium">Apri Profilo</div>
+        </a>
+
+        <a class="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition"
+           href="https://github.com/nicolaloconte" target="_blank" rel="noreferrer">
+          <div class="text-sm opacity-70">GitHub</div>
+          <div class="mt-1 font-medium">@nicolaloconte</div>
+        </a>
+
+        <a class="rounded-2xl border border-white/10 bg-white/5 p-4 hover:bg-white/10 transition"
+           href="/assets/Nicola_Andrea_Lo_Conte_CV.pdf" target="_blank" download>
+          <div class="text-sm opacity-70">Curriculum</div>
+          <div class="mt-1 font-medium">Scarica CV (PDF)</div>
+        </a>
+      </div>
+
+      <div class="mt-10 flex items-center justify-between text-xs opacity-60">
+        <span>© 2026 • Nico's Personal Portfolio</span>
+        <button type="button" class="hover:opacity-80" (click)="smoothScroll('home')">Torna su ↑</button>
+      </div>
+    </div>
+  </section>
+</main>

@@ -170,14 +170,21 @@ section {
   }
 }
 
-.brand-btn:focus,
-.brand-btn:focus-visible,
-.brand-btn .mat-mdc-focus-indicator {
-  outline: none !important;
+.brand-btn,
+.brand-btn:hover,
+.brand-btn:active,
+.brand-btn:focus-visible {
+  background: transparent !important;
   box-shadow: none !important;
 }
 
-/* MDC internal pseudo-element */
+/* MDC hover / focus overlay */
+.brand-btn .mat-mdc-button-persistent-ripple,
+.brand-btn .mat-mdc-focus-indicator {
+  display: none !important;
+}
+
+/* Extra sicurezza */
 .brand-btn::after {
   display: none !important;
 }
